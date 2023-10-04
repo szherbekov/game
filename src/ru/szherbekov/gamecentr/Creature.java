@@ -2,21 +2,21 @@ package ru.szherbekov.gamecentr;
 
 public abstract class Creature {
 
+    protected int health;
     private int attack;
     private int defence;
-    protected int health;
     private int minDamage;
     private int maxDamage;
 
     public Creature(int attack, int defence, int health, int minDamage, int maxDamage) {
-        if (attack < 0) {
-            this.attack = 0;
+        if (attack < 0 || attack == 0) {
+            this.attack = 1;
         }
         if (attack > 30) {
             this.attack = 30;
         }
-        if (defence < 0) {
-            this.defence = 0;
+        if (defence < 0 || defence == 0) {
+            this.defence = 1;
         }
         if (defence > 30) {
             this.defence = 30;

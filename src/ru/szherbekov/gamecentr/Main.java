@@ -5,8 +5,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Player player = new Player(50, 30, 15553, 4, 9, 30);
-        Monster monster = new Monster(40, 20, 30, 1, 5);
+        Player player = new Player(20, 30, 40, 4, 9, 50);
+        Monster monster = new Monster(10, 50, 30, 4, 10);
+        battle(player, monster);
+    }
+
+    private static void battle(Player player, Monster monster) {
         int countMonsterAttack = 0;
         while (player.getHealth() > 0 && monster.getHealth() > 0) {
             if (monster.getHealth() != 0 && player.getHealth() != 0) {
